@@ -1,24 +1,72 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Global Styles */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #333;
+    --hover-color: #ff4757;
+    --button-hover-bgcolor: #ca3b47;
+    --accent-color: #ff6b6b;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --light-text-color: #fff;
+}
+
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', 'SegoePro-Regular', 'Manrope-Regular', Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 10px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 /* Header Styles */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+    background: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 10px 0;
 }
 
 header .container {
@@ -44,9 +92,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--light-text-color);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
@@ -63,7 +112,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    color: #fff;
+    color: var(--light-text-color);
     text-align: center;
 }
 
@@ -93,23 +142,25 @@ nav ul li a:hover {
 }
 
 .btn {
-    background: #ff6b6b;
+    background: var(--accent-color);
     padding: 12px 24px;
     font-size: 18px;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
-    display: inline-block;
+    border: none;
+    color: var(--light-text-color);
+    transition: background 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background: #ff4757;
+    background: var(--button-hover-bgcolor);
+    cursor: pointer;
 }
 
 /* Footer Styles */
 footer {
-    background: #222;
-    color: #fff;
+    background: var(--secondary-color);
+    color: var(--light-text-color);
     text-align: center;
     padding: 20px 0;
 }
@@ -127,10 +178,10 @@ footer ul li {
 }
 
 footer ul li a {
-    color: #ff6b6b;
     text-decoration: none;
+    color: var(--accent-color);
 }
 
 footer ul li a:hover {
-    color: #ff4757;
+    color: var(--hover-color);
 }
